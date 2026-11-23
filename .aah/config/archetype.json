@@ -1,0 +1,5 @@
+{
+  "archetype": "brownfield-app-dev",
+  "specialization": "agentic-app",
+  "tier": "poc"
+}

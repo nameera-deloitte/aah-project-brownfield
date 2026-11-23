@@ -1,0 +1,11 @@
+version: 1
+project_id: "brownfield"
+last_updated: "2026-11-23T12:31:02Z"
+last_updated_after_feature: null
+tech_patterns: []
+integrations: []
+project_knowledge: []
+consumption_views:
+  quick_context: ""
+  style_guide: ""
+  known_concerns: ""

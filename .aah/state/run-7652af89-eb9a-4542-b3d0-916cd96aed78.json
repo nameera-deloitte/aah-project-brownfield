@@ -1,0 +1,39 @@
+{
+  "run_id": "7652af89-eb9a-4542-b3d0-916cd96aed78",
+  "harness_version": "1.1.0",
+  "created": "2026-11-23T12:25:08Z",
+  "updated": "2026-11-23T12:25:39Z",
+  "phase": "onboarding",
+  "archetype": "brownfield-app-dev",
+  "methods": [],
+  "active_requirements": [],
+  "open_gates": [],
+  "retry_counters": {},
+  "retry_threshold": 3,
+  "artifact_hashes": {
+    ".aah\\config\\interview-archetype.md": "55fb8791f6715f98",
+    ".aah\\config\\archetype.json": "5a3fa018ef072715"
+  },
+  "last_good_checkpoint": "phase:onboarding:pending",
+  "breaker_tripped": false,
+  "escalations": [],
+  "notes": [
+    "phase -> onboarding (from pipeline_state)"
+  ],
+  "model_overrides": {},
+  "composed_plan": [],
+  "plan_status": "configured",
+  "context_intelligence": null,
+  "completed_phases": [],
+  "artifact_sizes": {
+    ".aah\\config\\interview-archetype.md": 711,
+    ".aah\\config\\archetype.json": 92
+  },
+  "artifact_status": {
+    ".aah\\config\\interview-archetype.md": "written",
+    ".aah\\config\\archetype.json": "written"
+  },
+  "tasks_total": 7,
+  "tasks_completed": 0,
+  "tasks_inprogress": 0
+}

@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "harnesses": {
+    "claude": {
+      "deployed_at": "2026-11-23T12:25:28Z",
+      "harness_version": "1.1.0",
+      "mode": "full",
+      "fingerprint": "56ea24f3e1e7223ee96fe6aaf51fb3f9e607afadfcddd7bf53cd62d1b64ad381",
+      "entries": [
+        {
+          "dest": ".claude/agents/agentic-app-agentcore-deploy-engineer.md",
+          "kind": "agent",
+          "sha256": "54ac59bc53f126b61e18624d2290e7e22e0859d9c3ac8fbf74cc97891b0c1edb",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-amplify-deploy-engineer.md",
+          "kind": "agent",
+          "sha256": "23aa8e2ce43885e01a9d93621dfe2ffecdf30bcb996d48ba976967f2f140b21a",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-arch-review-board.md",
+          "kind": "agent",
+          "sha256": "f911e329438fe90e46da4117e11603c1b28585cc026f46d20d75656c186160af",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-cloudrun-deploy-engineer.md",
+          "kind": "agent",
+          "sha256": "bbf69786f0fb3f78a4dae1046ec8ed85c1919821ac54922c239bd3a70b8ae2d8",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-deploy-engineer.md",
+          "kind": "agent",
+          "sha256": "6cf95795c446757b8ae734fd5701e62bb6472ea339e8b74d3ea2f8fcb8172289",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-deploy-tester.md",
+          "kind": "agent",
+          "sha256": "f4ed8b9169a4a48e3f90e4c91d389e9dac8ceb53a04489429bbcc618ebf2c433",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-direct-fix.md",
+          "kind": "agent",
+          "sha256": "76086f648215577fe3101e3bbfeec099216ec86ba25e4c60a90b0b906e6249f7",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-ecs-deploy-engineer.md",
+          "kind": "agent",
+          "sha256": "d9561091101ebfc49036d98eb1b60226408c2db58ab6f6dd2d8cfd8d44c534d5",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-feature-implementer.md",
+          "kind": "agent",
+          "sha256": "5b99272ecad33cef1c5d89b0a23ee1de3293c83630797d3d03b4722133ed227e",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-frontend-deploy-engineer.md",
+          "kind": "agent",
+          "sha256": "226003925bad868a2bcc2812b02667c1c298534a7ebb62d30158ee62905d4438",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-issue-reporter.md",
+          "kind": "agent",
+          "sha256": "e7da0a7e8ba9f54dbd425af7cbe68055c8f5fab64a9551a4b3c3c5f3d4b9a305",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-issue-syncer.md",
+          "kind": "agent",
+          "sha256": "4d160c1bd24f721b7c33aaa5801455883cfa9b17c2c0185dca0c82ef4188b0c1",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-merge-resolver.md",
+          "kind": "agent",
+          "sha256": "a2ff68636116109455123b9e4d936efc3b32474decf3d1b4fedde817399860d3",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-module-to-feature.md",
+          "kind": "agent",
+          "sha256": "33e5cc2338a4da1da2e18e496816b64af34808b261e9b5808f2500e8a50e81e6",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-plan-corrector.md",
+          "kind": "agent",
+          "sha256": "6efba3313fcfee088e4c07bb6da83c11451388e5bd3b933eb708d64cfcd2ee3a",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-plan-critic.md",
+          "kind": "agent",
+          "sha256": "029039bb3d02267711807a01f590e00e6d2e4cc51ebe15f47ab2a3d8fa7f495d",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/agents/agentic-app-port-executor.md",
+          "kind": "agent",
+          "sha256": "83e363c90527fa01b4c8a33208f07cbb43164f69bc6bd70d546d2fa5dcaac66d",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/aah-dashboard.md",
+          "kind": "command",
+          "sha256": "640ce5412556cf82d67c05ea317c921fe51d88386329caa284fb4424a00840c9",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/aah-help.md",
+          "kind": "command",
+          "sha256": "b25bd4ed0189ca7a5712131922c043732a6b0ce651785f931bdd4d4d789cf900",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/aah-init.md",
+          "kind": "command",
+          "sha256": "fc11015ad123d2b897235a4296298264ab8b01111fa323a519ca8d4157cb2cd9",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/aah-run.md",
+          "kind": "command",
+          "sha256": "ce7f4952fc1d2aec6d848b42140298942742b6e76c0c4f1699d977e623ba1bcc",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-arch.md",
+          "kind": "command",
+          "sha256": "1ceee52d30a3db1a9ab255adbd9d761718e7f99230fd2db4f8b9bc87fbbf7db4",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-brownfield-import.md",
+          "kind": "command",
+          "sha256": "51610440c347779487c5eb96db3f09b5487f036e3f082dda3413e90db5d7a78d",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-brownfield-plan.md",
+          "kind": "command",
+          "sha256": "41a75f44dc38ce838a04e47d2e20311151c4fcb7ddd814487612943a018972a5",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-build.md",
+          "kind": "command",
+          "sha256": "aa97c36842267a3dee81514fac403afda51b252d7f3bd7404534d74490b106dd",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-deploy.md",
+          "kind": "command",
+          "sha256": "f3b9eddbeb95780055ccfc9699eadd5d6a94a57de0e313720e12eae9c8a69527",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-discuss.md",
+          "kind": "command",
+          "sha256": "f7aacd21190fbf4219b134eaf417ddcd468dd9392a30e029894497ca8eb0236b",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-onboard-github.md",
+          "kind": "command",
+          "sha256": "9a77442118b4c72b2192c10623746d772a2f42cad78b498f9da9f98d89add4e4",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-pause.md",
+          "kind": "command",
+          "sha256": "307ee67c3495bb8c3a9f865173c682775bf39cbd37a66ea5c63794db4598a320",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/commands/agentic-resume.md",
+          "kind": "command",
+          "sha256": "a94e930d87917325ce52106166877e5fbf2a651533d225cbdcf1d240475b3869",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/rules/aah-instructions.md",
+          "kind": "rule",
+          "sha256": "27399ac050b12a4a10e7ace518deba8c8325764bfea9933d2a52fe2fe7cd0ce2",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/settings.json.aah-managed",
+          "kind": "file",
+          "sha256": "578027a804471715d2099f441efaf5c9124fa23b92ae620feaa26123cce91ebf",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/aah-pipeline-selection/SKILL.md",
+          "kind": "skill",
+          "sha256": "fcea6ef0f67f33d8ca55a854e0a2f13d1af057dbac4a1e8594024ac352f9c7c1",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-access/SKILL.md",
+          "kind": "skill",
+          "sha256": "24bef0463ed1ad2354111dcef45607529548291779e6d9c0a21e0cd47b2ae657",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-agentcore-conventions/SKILL.md",
+          "kind": "skill",
+          "sha256": "61c28f6aac227a19abb0034735b1ea2ad2dce99b8c3c4cf2e59fecc77d0f771f",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-agentcore-implement/SKILL.md",
+          "kind": "skill",
+          "sha256": "1c1d03cf515a052926bb2ab15bbdd02c4af4f15c5aaae6537b64c745c1e213e9",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-agentcore-memory/SKILL.md",
+          "kind": "skill",
+          "sha256": "f667615398b131a85ef27d68b1e140d174c38880845dfc4beddcfad686dcd93e",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-arch/SKILL.md",
+          "kind": "skill",
+          "sha256": "a190fe9a8824687eb56b3986d26f4c2a2449624118efaacccc8952e73393c7a7",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-brownfield-onboard/SKILL.md",
+          "kind": "skill",
+          "sha256": "8f5640ef0aa987c1b1dcd89bf78e413dc4db783f105b45b0ae596f2c3db31360",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-brownfield-plan/SKILL.md",
+          "kind": "skill",
+          "sha256": "1af73860e3c04888f105fb6b642cecad00884dce2b2a7d28ebe51d7bfd4a3e3e",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-build/SKILL.md",
+          "kind": "skill",
+          "sha256": "073cca0d4ea8fecf2a5b2e297364a470b2e9cb478264ecc0e6b12b8bb1ec2c8a",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-code-review/SKILL.md",
+          "kind": "skill",
+          "sha256": "a7632df9d2d568a4c456d3d31691bf380beb3f66ae347d8fec2ab8c4d83f660d",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-codebase-profile/SKILL.md",
+          "kind": "skill",
+          "sha256": "4b7f7a9205c98a9dd7c1b638dace6c9f1caf2112fad6f7189a7f93b0f4385d4e",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-deloitte-brand/SKILL.md",
+          "kind": "skill",
+          "sha256": "cc9b5d89e5d50d2e9874e9c3af7f76c4bc6274fc8f2acdcf8b82bc086b76f89a",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-deloitte-brand/references/digital-brand.md",
+          "kind": "skill",
+          "sha256": "9d962440719c762acf35c0a3a81888fcbe4a65c0a4051da94695e9f0e1c36c87",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-deloitte-brand/references/examples.md",
+          "kind": "skill",
+          "sha256": "73ed8620f8e8fdabdd460011a059548dd6d00fc270d7166f47c6306149f6edd4",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-deloitte-brand/references/messaging-details.md",
+          "kind": "skill",
+          "sha256": "f2337478494e1eda7d172a525b111ee76d229669c37ad3e3a982842b0f32b8d8",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-deploy/SKILL.md",
+          "kind": "skill",
+          "sha256": "86c6387c04d87a0b524b549d4be2df42f969a43eb0e4c36cc6a0b8d4d186f16c",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-fix/SKILL.md",
+          "kind": "skill",
+          "sha256": "5447a81ec2ace93d335e37f931c946687c0b4900095c211c0c3f0217e6f7451a",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-git-workflow/SKILL.md",
+          "kind": "skill",
+          "sha256": "d951a3bcf7308026dd072a6928b818e149e657741a7251d04f9652889df987be",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-mcp-integration/SKILL.md",
+          "kind": "skill",
+          "sha256": "a15064502f4b205e14beb8772b6fcf3d94513fdd7d7b9c7e305fdf5d170198c8",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-mermaid-diagram/SKILL.md",
+          "kind": "skill",
+          "sha256": "19c47070f5bd8a80680e8a3ba7197b1c2322cd633ec74ce811cc3af1e9b02865",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-pause/SKILL.md",
+          "kind": "skill",
+          "sha256": "d71f00eb1a66c761e17d6a8b333f552dcef6f6d570f097bb28b5e0f1dc0d021e",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-prohibited-use/SKILL.md",
+          "kind": "skill",
+          "sha256": "fb92b16fc50c0be1b302b20514c8db612942ee1fed064bc5398b9dc23f2aa61e",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-resume/SKILL.md",
+          "kind": "skill",
+          "sha256": "6393d5a351110f71aac3c4bfa4c5eeb97195aa5c08feaf9d05361ec6737b2142",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-risk/SKILL.md",
+          "kind": "skill",
+          "sha256": "3d4298aea2bd83993fec837d3c784284e018110e0c78aa56276eb43aacd91496",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-security-fix/SKILL.md",
+          "kind": "skill",
+          "sha256": "d3244ba2fea8469cb79973940f7f97ae80276fe13de2d1211cc9f9f96e86b185",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-security-scan/SKILL.md",
+          "kind": "skill",
+          "sha256": "c4e6952250ad60199a4ade16759f595bf2e8cbdc1affec5e889bc0dba5e165a6",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-tdd/SKILL.md",
+          "kind": "skill",
+          "sha256": "5eb51cf0e830bfd4ac067b200eb42aa683ee4bc8e8ebac4318db06c69ec8eab3",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-tdd/mocking.md",
+          "kind": "skill",
+          "sha256": "9a26e91b6bb7592d8741d31d8a921a68b328c6c615cac85f90b3ffd600b0c4fe",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-tdd/tests.md",
+          "kind": "skill",
+          "sha256": "bb9eb15a59e93fd848115620acb9653ada17c892f3fd4e80c9712ddd68449947",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-testing-standards/SKILL.md",
+          "kind": "skill",
+          "sha256": "66616a4d356be2e6525555524ca40bf0205c26c8f7eb3a0663a208e9d838451a",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-usage/SKILL.md",
+          "kind": "skill",
+          "sha256": "e4a3823ea16d4fe7bb9bf2abaf1491b04276f15dd2fb35bc55b868a706ed5c1d",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-ux/SKILL.md",
+          "kind": "skill",
+          "sha256": "088a8f3b167cdc503d52be4302bb31ee071ba982112ce086089aee596e478fca",
+          "kept_local": false
+        },
+        {
+          "dest": ".claude/skills/agentic-app-version/SKILL.md",
+          "kind": "skill",
+          "sha256": "bf419ae264e2771bc5852371fe66f8b2f50aaf9b72c14c60771d9571abaae2e2",
+          "kept_local": false
+        }
+      ]
+    }
+  }
+}
