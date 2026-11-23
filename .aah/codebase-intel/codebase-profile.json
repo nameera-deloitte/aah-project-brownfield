@@ -1,0 +1,260 @@
+{
+  "profile_version": "1.0",
+  "root": "C:\\Users\\nambanu\\Downloads\\brownfield",
+  "summary": {
+    "total_files": 4,
+    "total_lines": 863,
+    "total_bytes": 31753,
+    "primary_language": "python",
+    "languages": {
+      "python": 3,
+      "toml": 1
+    },
+    "frameworks": [
+      {
+        "name": "Anthropic SDK",
+        "type": "python"
+      }
+    ],
+    "data_stores": []
+  },
+  "directory_structure": {
+    "config": 1
+  },
+  "architecture": {
+    "layers": {
+      "application": 4
+    },
+    "layer_files": {
+      "application": [
+        "agentic_app.py",
+        "agentic_tester.py",
+        "config\\env_check.py",
+        "ruff.toml"
+      ]
+    },
+    "coupling": {
+      "afferent_top": [
+        {
+          "module": "pathlib",
+          "dependents": 3
+        },
+        {
+          "module": "import json",
+          "dependents": 2
+        },
+        {
+          "module": "import os",
+          "dependents": 2
+        },
+        {
+          "module": "import anthropic",
+          "dependents": 2
+        },
+        {
+          "module": "import subprocess",
+          "dependents": 1
+        },
+        {
+          "module": "import asyncio",
+          "dependents": 1
+        },
+        {
+          "module": "playwright.async_api",
+          "dependents": 1
+        },
+        {
+          "module": "__future__",
+          "dependents": 1
+        },
+        {
+          "module": "import sys",
+          "dependents": 1
+        }
+      ],
+      "efferent_top": [
+        {
+          "module": "agentic_app.py",
+          "dependencies": 5
+        },
+        {
+          "module": "agentic_tester.py",
+          "dependencies": 5
+        },
+        {
+          "module": "config\\env_check.py",
+          "dependencies": 4
+        }
+      ]
+    },
+    "hotspots": [
+      {
+        "file": "config\\env_check.py",
+        "symbols": 6
+      },
+      {
+        "file": "agentic_app.py",
+        "symbols": 5
+      },
+      {
+        "file": "agentic_tester.py",
+        "symbols": 4
+      }
+    ]
+  },
+  "symbols": {
+    "total": 15,
+    "files_parsed": 3,
+    "by_kind": {
+      "function": 12,
+      "async_function": 2,
+      "class": 1
+    },
+    "top_level": [
+      {
+        "name": "execute_tool",
+        "kind": "function",
+        "file": "agentic_app.py",
+        "line": 142,
+        "fqn": "agentic_app.py:execute_tool"
+      },
+      {
+        "name": "run_agent",
+        "kind": "function",
+        "file": "agentic_app.py",
+        "line": 241,
+        "fqn": "agentic_app.py:run_agent"
+      },
+      {
+        "name": "_banner",
+        "kind": "function",
+        "file": "agentic_app.py",
+        "line": 312,
+        "fqn": "agentic_app.py:_banner"
+      },
+      {
+        "name": "_divider",
+        "kind": "function",
+        "file": "agentic_app.py",
+        "line": 318,
+        "fqn": "agentic_app.py:_divider"
+      },
+      {
+        "name": "_log",
+        "kind": "function",
+        "file": "agentic_app.py",
+        "line": 322,
+        "fqn": "agentic_app.py:_log"
+      },
+      {
+        "name": "_run_tool",
+        "kind": "async_function",
+        "file": "agentic_tester.py",
+        "line": 150,
+        "fqn": "agentic_tester.py:_run_tool"
+      },
+      {
+        "name": "run",
+        "kind": "async_function",
+        "file": "agentic_tester.py",
+        "line": 253,
+        "fqn": "agentic_tester.py:run"
+      },
+      {
+        "name": "_banner",
+        "kind": "function",
+        "file": "agentic_tester.py",
+        "line": 340,
+        "fqn": "agentic_tester.py:_banner"
+      },
+      {
+        "name": "_section",
+        "kind": "function",
+        "file": "agentic_tester.py",
+        "line": 346,
+        "fqn": "agentic_tester.py:_section"
+      },
+      {
+        "name": "ConfigError",
+        "kind": "class",
+        "file": "config\\env_check.py",
+        "line": 35,
+        "fqn": "config\\env_check.py:ConfigError"
+      },
+      {
+        "name": "load_dotenv",
+        "kind": "function",
+        "file": "config\\env_check.py",
+        "line": 39,
+        "fqn": "config\\env_check.py:load_dotenv"
+      },
+      {
+        "name": "missing_env",
+        "kind": "function",
+        "file": "config\\env_check.py",
+        "line": 60,
+        "fqn": "config\\env_check.py:missing_env"
+      },
+      {
+        "name": "format_config_error",
+        "kind": "function",
+        "file": "config\\env_check.py",
+        "line": 65,
+        "fqn": "config\\env_check.py:format_config_error"
+      },
+      {
+        "name": "check_env",
+        "kind": "function",
+        "file": "config\\env_check.py",
+        "line": 79,
+        "fqn": "config\\env_check.py:check_env"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "file": "config\\env_check.py",
+        "line": 91,
+        "fqn": "config\\env_check.py:main"
+      }
+    ]
+  },
+  "imports": {
+    "module_graph_size": 3,
+    "entries": [
+      {
+        "file": "agentic_app.py",
+        "imports": [
+          "import json",
+          "import os",
+          "import subprocess",
+          "pathlib",
+          "import anthropic"
+        ]
+      },
+      {
+        "file": "agentic_tester.py",
+        "imports": [
+          "import asyncio",
+          "import json",
+          "pathlib",
+          "import anthropic",
+          "playwright.async_api"
+        ]
+      },
+      {
+        "file": "config\\env_check.py",
+        "imports": [
+          "__future__",
+          "import os",
+          "import sys",
+          "pathlib"
+        ]
+      }
+    ]
+  },
+  "entry_points": [],
+  "config_files": [],
+  "data_model_files": [],
+  "api_layer_files": [],
+  "test_files_count": 0
+}
