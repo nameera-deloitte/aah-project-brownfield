@@ -1,0 +1,15 @@
+# BEGIN Ascend Agentic Harness — append-only logs, always union-merged
+.aah/Observability/events.jsonl merge=union
+analysis/*/DECISIONS.jsonl merge=union
+analysis/*/model/annotations/*.jsonl merge=union
+# END Ascend Agentic Harness — append-only logs
+
+# AAH scaffold merge rules
+* text=auto eol=lf
+.aah/codebase-intel/codemap.db merge=ours binary
+.aah/feature-list.json merge=ours
+.aah/audit/token-usage.json merge=ours
+.aah/claude-progress.json merge=ours
+.aah/pause-context.json merge=ours
+.aah/pause-state.json merge=ours
+.aah/audit/activity-log.jsonl merge=union
