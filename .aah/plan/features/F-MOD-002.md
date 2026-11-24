@@ -79,4 +79,4 @@ The full capability-validation and flow mechanics are specified in `architecture
   - PY-CONV-003
 
 ## Status
-planned
+done

@@ -128,4 +128,4 @@ The 6 QA-agent tools and their capability strings: `open_page → ["browser.navi
   - PY-CONV-003
 
 ## Status
-planned
+done

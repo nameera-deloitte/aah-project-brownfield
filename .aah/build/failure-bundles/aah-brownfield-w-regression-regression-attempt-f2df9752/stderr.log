@@ -1,0 +1,13 @@
+Downloading pygments (1.2MiB)
+Downloading pydantic-core (2.2MiB)
+Downloading anthropic (2.5MiB)
+Downloading playwright (40.7MiB)
+ Downloaded pygments
+ Downloaded pydantic-core
+ Downloaded anthropic
+ Downloaded playwright
+Installed 26 packages in 2.62s
+C:\Users\nambanu\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-f2df9752-si0vvd10\cache\uv\archive-v0\zLkwoxj9eMRoHpoG\Lib\site-packages\pytest_asyncio\plugin.py:306: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session". Set it to "fixture-scope" to keep the current behavior.
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))

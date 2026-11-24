@@ -1,0 +1,65 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CI pipeline — brownfield
+#
+# Triggers: push or pull-request to main or develop.
+#
+# ANTHROPIC_API_KEY is provided from GitHub Secrets.  The test suite uses
+# offline mocks (conftest.py pre-stubs the Anthropic client), so a *real* API
+# key is NOT required for the tests to pass.  The secret is set here so that
+# any test that attempts a live call will fail fast rather than silently skip.
+# If you do not want to store the secret in CI, replace the env value with a
+# dummy string such as "sk-test-not-real".
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  lint-and-test:
+    name: Lint + Test (Python 3.12)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      # Tests are fully mocked; set a placeholder so env-checks inside the app
+      # do not fail on import.  Replace with ${{ secrets.ANTHROPIC_API_KEY }}
+      # if you want live-call coverage in CI.
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY || 'sk-ant-ci-placeholder' }}
+      # Disable Playwright from attempting to download browsers during test run
+      # (the conftest mocks Playwright; remove if live browser tests are added).
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: |
+          curl -fsSL https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install runtime dependencies
+        run: uv pip install --system --no-cache -r requirements.txt
+
+      - name: Install dev dependencies
+        run: uv pip install --system --no-cache -r requirements-dev.txt
+
+      - name: Lint with ruff
+        run: ruff check .
+
+      - name: Run test suite
+        run: pytest tests/ -v --tb=short

@@ -1,0 +1,747 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\nambanu\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\builds-v0\.tmpcnFXr9\Scripts\python.exe
+cachedir: C:\Users\nambanu\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\pytest
+rootdir: C:\Users\nambanu\Downloads\brownfield
+configfile: pytest.ini
+plugins: anyio-4.16.0, asyncio-1.5.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 52 items
+
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_requirements_dev_txt_content PASSED [  1%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_requirements_no_conflict_with_production FAILED [  3%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_pytest_collect_only_clean PASSED [  5%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_mock_client_first_call_tool_use PASSED [  7%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_mock_client_second_call_end_turn PASSED [  9%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_mock_client_content_tool_use_block PASSED [ 11%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_mock_client_no_http_connection PASSED [ 13%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_mock_page_async_methods PASSED [ 15%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_mock_page_is_async_mock PASSED [ 17%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_asyncio_mode_auto PASSED   [ 19%]
+tests/test_F_MOD_000_infra.py::test_F_MOD_000_env_example_api_key ***REDACTED*** [ 21%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_app_capability_map_entries FAILED [ 23%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_capability_map_entries FAILED [ 25%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_max_iterations FAILED [ 26%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_execute_tool_allowed_passes_through FAILED [ 28%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_execute_tool_blocked_raises_capability_error FAILED [ 30%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_run_tool_allowed_passes_through FAILED [ 32%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_run_tool_blocked_raises_capability_error FAILED [ 34%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_capability_error_properties FAILED [ 36%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_capability_error_properties FAILED [ 38%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_run_loop_iteration_cap FAILED [ 40%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_all_app_tools_no_regression FAILED [ 42%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_all_tester_tools_no_regression FAILED [ 44%]
+tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_env_example_has_anthropic_api_key ***REDACTED*** [ 46%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_capability_error FAILED [ 48%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_read_file FAILED [ 50%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_write_file FAILED [ 51%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[rm -rf /] FAILED [ 53%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[del /f /s /q C:\\Windows] FAILED [ 55%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[format C:] FAILED [ 57%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[mkfs.ext4 /dev/sda1] FAILED [ 59%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[sudo apt-get install vim] FAILED [ 61%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[shutdown -r now] FAILED [ 63%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[:(){ :|:& };:] FAILED [ 65%]
+tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_safe FAILED [ 67%]
+tests/test_golden.py::test_F_MOD_002_golden_yaml_has_required_fields PASSED [ 69%]
+tests/test_golden.py::test_F_MOD_002_golden_covers_both_outcomes PASSED  [ 71%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[echo hello] PASSED [ 73%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[python --version] PASSED [ 75%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[git status] PASSED [ 76%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[cat README.md] PASSED [ 78%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[ls] PASSED       [ 80%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[rm -rf /] PASSED [ 82%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[sudo apt-get install vim] PASSED [ 84%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[del /f /s /q C:\\Windows] PASSED [ 86%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[shutdown -r] PASSED [ 88%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[mkfs.ext4 /dev/sda1] PASSED [ 90%]
+tests/test_golden.py::test_F_MOD_002_golden_run_command[:(){ :|:& };:] PASSED [ 92%]
+tests/test_iteration_cap.py::test_F_MOD_002_iteration_cap FAILED         [ 94%]
+tests/test_run_tool.py::test_F_MOD_002_run_tool_capability_error FAILED  [ 96%]
+tests/test_run_tool.py::test_F_MOD_002_run_tool_open_page FAILED         [ 98%]
+tests/test_run_tool.py::test_F_MOD_002_run_tool_record_result FAILED     [100%]
+
+================================== FAILURES ===================================
+___________ test_F_MOD_000_requirements_no_conflict_with_production ___________
+tests\test_F_MOD_000_infra.py:45: in test_F_MOD_000_requirements_no_conflict_with_production
+    assert not overlap, (
+E   AssertionError: requirements-dev.txt duplicates production packages: {'pytest-asyncio'}. This risks version conflicts.
+E   assert not {'pytest-asyncio'}
+__________________ test_F_MOD_001_app_capability_map_entries __________________
+tests\test_F_MOD_001_capability_gate.py:23: in test_F_MOD_001_app_capability_map_entries
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:29: in <module>
+    from ..beta.beta_invalid_metadata_error_details import BetaInvalidMetadataErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+________________ test_F_MOD_001_tester_capability_map_entries _________________
+tests\test_F_MOD_001_capability_gate.py:40: in test_F_MOD_001_tester_capability_map_entries
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+____________________ test_F_MOD_001_tester_max_iterations _____________________
+tests\test_F_MOD_001_capability_gate.py:58: in test_F_MOD_001_tester_max_iterations
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_____________ test_F_MOD_001_execute_tool_allowed_passes_through ______________
+tests\test_F_MOD_001_capability_gate.py:68: in test_F_MOD_001_execute_tool_allowed_passes_through
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_________ test_F_MOD_001_execute_tool_blocked_raises_capability_error _________
+tests\test_F_MOD_001_capability_gate.py:82: in test_F_MOD_001_execute_tool_blocked_raises_capability_error
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_______________ test_F_MOD_001_run_tool_allowed_passes_through ________________
+tests\test_F_MOD_001_capability_gate.py:93: in test_F_MOD_001_run_tool_allowed_passes_through
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+___________ test_F_MOD_001_run_tool_blocked_raises_capability_error ___________
+tests\test_F_MOD_001_capability_gate.py:120: in test_F_MOD_001_run_tool_blocked_raises_capability_error
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_________________ test_F_MOD_001_capability_error_properties __________________
+tests\test_F_MOD_001_capability_gate.py:131: in test_F_MOD_001_capability_error_properties
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+______________ test_F_MOD_001_tester_capability_error_properties ______________
+tests\test_F_MOD_001_capability_gate.py:142: in test_F_MOD_001_tester_capability_error_properties
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+________________ test_F_MOD_001_tester_run_loop_iteration_cap _________________
+tests\test_F_MOD_001_capability_gate.py:156: in test_F_MOD_001_tester_run_loop_iteration_cap
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_________________ test_F_MOD_001_all_app_tools_no_regression __________________
+tests\test_F_MOD_001_capability_gate.py:223: in test_F_MOD_001_all_app_tools_no_regression
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+________________ test_F_MOD_001_all_tester_tools_no_regression ________________
+tests\test_F_MOD_001_capability_gate.py:266: in test_F_MOD_001_all_tester_tools_no_regression
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+________________ test_F_MOD_002_execute_tool_capability_error _________________
+tests\test_execute_tool.py:17: in test_F_MOD_002_execute_tool_capability_error
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+____________________ test_F_MOD_002_execute_tool_read_file ____________________
+tests\test_execute_tool.py:28: in test_F_MOD_002_execute_tool_read_file
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+___________________ test_F_MOD_002_execute_tool_write_file ____________________
+tests\test_execute_tool.py:41: in test_F_MOD_002_execute_tool_write_file
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_____ test_F_MOD_002_execute_tool_run_command_blocked_keywords[rm -rf /] ______
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_ test_F_MOD_002_execute_tool_run_command_blocked_keywords[del /f /s /q C:\\Windows] _
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_____ test_F_MOD_002_execute_tool_run_command_blocked_keywords[format C:] _____
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_ test_F_MOD_002_execute_tool_run_command_blocked_keywords[mkfs.ext4 /dev/sda1] _
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+_ test_F_MOD_002_execute_tool_run_command_blocked_keywords[sudo apt-get install vim] _
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+__ test_F_MOD_002_execute_tool_run_command_blocked_keywords[shutdown -r now] __
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+___ test_F_MOD_002_execute_tool_run_command_blocked_keywords[:(){ :|:& };:] ___
+tests\test_execute_tool.py:74: in test_F_MOD_002_execute_tool_run_command_blocked_keywords
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+________________ test_F_MOD_002_execute_tool_run_command_safe _________________
+tests\test_execute_tool.py:96: in test_F_MOD_002_execute_tool_run_command_safe
+    import agentic_app
+agentic_app.py:26: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+________________________ test_F_MOD_002_iteration_cap _________________________
+tests\test_iteration_cap.py:10: in test_F_MOD_002_iteration_cap
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+__________________ test_F_MOD_002_run_tool_capability_error ___________________
+tests\test_run_tool.py:23: in test_F_MOD_002_run_tool_capability_error
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+______________________ test_F_MOD_002_run_tool_open_page ______________________
+tests\test_run_tool.py:34: in test_F_MOD_002_run_tool_open_page
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+____________________ test_F_MOD_002_run_tool_record_result ____________________
+tests\test_run_tool.py:77: in test_F_MOD_002_run_tool_record_result
+    import agentic_tester
+agentic_tester.py:23: in <module>
+    import anthropic
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\__init__.py:3: in <module>
+    from . import types
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\__init__.py:6: in <module>
+    from .shared import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\__init__.py:4: in <module>
+    from .error_details import ErrorDetails as ErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\shared\error_details.py:47: in <module>
+    from ..beta.beta_environment_archived_error_details import BetaEnvironmentArchivedErrorDetails
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\__init__.py:326: in <module>
+    from .beta_managed_agents_deployment import BetaManagedAgentsDeployment as BetaManagedAgentsDeployment
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment.py:12: in <module>
+    from .beta_managed_agents_deployment_paused_reason import BetaManagedAgentsDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason.py:5: in <module>
+    from .beta_managed_agents_error_deployment_paused_reason import BetaManagedAgentsErrorDeploymentPausedReason
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_error_deployment_paused_reason.py:4: in <module>
+    from .beta_managed_agents_deployment_paused_reason_error_object import (
+..\..\AppData\Local\Temp\aah-brownfield-w-regression-regression-attempt-b21f9d3d-odkzc9h7\cache\uv\archive-v0\DumT00cwun-HyOtj\Lib\site-packages\anthropic\types\beta\beta_managed_agents_deployment_paused_reason_error_object.py:41: in <module>
+    from .beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object import (
+E   ModuleNotFoundError: No module named 'anthropic.types.beta.beta_managed_agents_session_resource_not_found_deployment_paused_reason_error_object'
+- generated xml file: C:\Users\nambanu\AppData\Local\Temp\aah-regression-koe7cu10.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_F_MOD_000_infra.py::test_F_MOD_000_requirements_no_conflict_with_production
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_app_capability_map_entries
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_capability_map_entries
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_max_iterations
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_execute_tool_allowed_passes_through
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_execute_tool_blocked_raises_capability_error
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_run_tool_allowed_passes_through
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_run_tool_blocked_raises_capability_error
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_capability_error_properties
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_capability_error_properties
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_tester_run_loop_iteration_cap
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_all_app_tools_no_regression
+FAILED tests/test_F_MOD_001_capability_gate.py::test_F_MOD_001_all_tester_tools_no_regression
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_capability_error
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_read_file - Mo...
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_write_file - M...
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[rm -rf /]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[del /f /s /q C:\\Windows]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[format C:]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[mkfs.ext4 /dev/sda1]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[sudo apt-get install vim]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[shutdown -r now]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_blocked_keywords[:(){ :|:& };:]
+FAILED tests/test_execute_tool.py::test_F_MOD_002_execute_tool_run_command_safe
+FAILED tests/test_iteration_cap.py::test_F_MOD_002_iteration_cap - ModuleNotF...
+FAILED tests/test_run_tool.py::test_F_MOD_002_run_tool_capability_error - Mod...
+FAILED tests/test_run_tool.py::test_F_MOD_002_run_tool_open_page - ModuleNotF...
+FAILED tests/test_run_tool.py::test_F_MOD_002_run_tool_record_result - Module...
+======================== 28 failed, 24 passed in 9.32s ========================

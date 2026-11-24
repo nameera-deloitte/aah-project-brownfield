@@ -1,0 +1,72 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# environments.yaml — brownfield deployment tier strategy
+#
+# Three tiers are defined: local, dev, prod.
+# Cloud is not used (decision-registry: cloud-vs-local=local).
+# All tiers share the same single-run, in-memory data model — no database or
+# persistent store is provisioned at any tier.
+# ─────────────────────────────────────────────────────────────────────────────
+
+environments:
+
+  local:
+    description: >
+      Developer workstation. Run the application directly with uv — no
+      container required.  Used for day-to-day development and debugging.
+    run_command: uv run python agentic_app.py
+    test_command: pytest tests/ -v
+    env_file: .env                       # copy from .env.example, never commit
+    required_secrets:
+      - ANTHROPIC_API_KEY
+    notes:
+      - uv must be installed (curl -fsSL https://astral.sh/uv/install.sh | sh)
+      - Create .env from .env.example and fill in ANTHROPIC_API_KEY
+      - Playwright browsers must be installed: uv run playwright install chromium
+
+  dev:
+    description: >
+      Local Docker container. Used to verify that the containerised image
+      behaves identically to the local tier before promoting to prod.
+    image: ghcr.io/nameera-deloitte/aah-project-brownfield:latest
+    build_command: docker build -t brownfield:dev .
+    run_command: >
+      docker run --rm
+        -e ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
+        brownfield:dev
+    env_file: .env
+    required_secrets:
+      - ANTHROPIC_API_KEY
+    notes:
+      - Build the image locally before running
+      - Pass secrets via -e, never bake them into the image with --build-arg
+
+  prod:
+    description: >
+      Docker container on a server or cloud VM (self-hosted).  The CD pipeline
+      (cd.yml) builds and pushes the image to ghcr.io on every push to main.
+      Pull and restart the container on the target host to deploy.
+    image: ghcr.io/nameera-deloitte/aah-project-brownfield:latest
+    deploy_steps:
+      - docker pull ghcr.io/nameera-deloitte/aah-project-brownfield:latest
+      - docker stop brownfield || true
+      - docker rm brownfield || true
+      - >
+        docker run -d
+          --name brownfield
+          --restart unless-stopped
+          -e ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
+          ghcr.io/nameera-deloitte/aah-project-brownfield:latest
+    required_secrets:
+      - ANTHROPIC_API_KEY
+    secret_management: >
+      Store ANTHROPIC_API_KEY in the host's environment (e.g. /etc/environment,
+      a systemd EnvironmentFile, or a secrets manager such as HashiCorp Vault or
+      AWS Secrets Manager) and inject via -e at container start.  Never store
+      the value in a Docker image layer or in source control.
+    rollback: >
+      Replace :latest with the short SHA tag of the previous good build,
+      e.g. ghcr.io/nameera-deloitte/aah-project-brownfield:<sha>, and redeploy.
+    notes:
+      - Authenticate to ghcr.io with: docker login ghcr.io -u <github-user>
+      - SSH-based automated deployment is available via the commented-out step
+        in .github/workflows/cd.yml

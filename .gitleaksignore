@@ -1,0 +1,4 @@
+# False positives — internal AAH session identifiers
+# session_secret_sha256 is a SHA256 hash used as an internal AAH run identifier,
+# not a secret or API key.
+.aah/build/test-results/regression-latest.json:generic-api-key:33

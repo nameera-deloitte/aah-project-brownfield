@@ -1,7 +1,7 @@
 {
   "features": [
     {
-      "status": "planned",
+      "status": "done",
       "id": "F-MOD-000",
       "title": "pytest Infrastructure and Shared Conftest Fixtures",
       "module_ref": "MOD-000",
@@ -41,10 +41,10 @@
           ]
         }
       ],
-      "passes": false
+      "passes": true
     },
     {
-      "status": "planned",
+      "status": "done",
       "id": "F-MOD-001",
       "title": "Capability-Scoped Auth Gate for Agent Tools",
       "module_ref": "MOD-001",
@@ -85,10 +85,10 @@
           ]
         }
       ],
-      "passes": false
+      "passes": true
     },
     {
-      "status": "planned",
+      "status": "done",
       "id": "F-MOD-002",
       "title": "pytest Test Suite and Golden Evals",
       "module_ref": "MOD-002",
@@ -126,7 +126,7 @@
           ]
         }
       ],
-      "passes": false
+      "passes": true
     }
   ]
 }

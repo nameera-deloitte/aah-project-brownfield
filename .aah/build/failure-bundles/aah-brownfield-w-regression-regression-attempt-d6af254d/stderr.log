@@ -1,0 +1,11 @@
+Downloading cpython-3.12.16-windows-x86_64-none (download) (21.3MiB)
+ Downloaded cpython-3.12.16-windows-x86_64-none (download)
+Downloading pygments (1.2MiB)
+Downloading anthropic (2.5MiB)
+Downloading playwright (40.7MiB)
+Downloading pydantic-core (2.2MiB)
+ Downloaded pydantic-core
+ Downloaded pygments
+ Downloaded playwright
+ Downloaded anthropic
+Installed 24 packages in 6.27s

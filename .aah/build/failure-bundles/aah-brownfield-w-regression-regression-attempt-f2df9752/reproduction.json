@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "run_id": "aah-brownfield-w-regression-regression-attempt-f2df9752",
+  "created_at": "2026-11-24T12:13:01.359143+00:00",
+  "subject": {
+    "commit_sha": "00958e597237bd3b91681d983baf6c60d29df77f5914234fc80b286e1b028b74",
+    "branch": "develop",
+    "rel_path": "."
+  },
+  "execution": {
+    "argv": [
+      "uv",
+      "run",
+      "--python",
+      "3.12",
+      "--with-requirements",
+      "requirements.txt",
+      "--with",
+      "pytest",
+      "python",
+      "-m",
+      "pytest",
+      "tests/",
+      "-v",
+      "--tb=short",
+      "--junitxml=C:UsersnambanuAppDataLocalTempaah-regression-gepy41va.xml"
+    ],
+    "cwd": ".",
+    "adapter": null,
+    "seed": null,
+    "started_at": "2026-11-24T12:13:01.337202+00:00",
+    "finished_at": "2026-11-24T12:13:01.337203+00:00",
+    "exit_code": 1
+  },
+  "tool_versions": {
+    "python": "3.14.7",
+    "pytest": null,
+    "docker": null
+  },
+  "cleanup": {
+    "transport": "none",
+    "action": "cleanup_namespace",
+    "namespace": "aah-brownfield-w-regression-regression-attempt-f2df9752",
+    "removed": [],
+    "leftover": [],
+    "errors": [],
+    "stopped": true,
+    "timestamp": "2026-11-24T12:13:01.337125+00:00"
+  },
+  "diagnostic": null,
+  "logs": {
+    "stderr": {
+      "file": "stderr.log",
+      "sha256": "6d1e9a6fcb11b4ad78a4da97d00e350d62f112bd364e34a56e9a13650ae11309",
+      "bytes": 1048
+    },
+    "stdout": {
+      "file": "stdout.log",
+      "sha256": "206b0e5472d36dbbadae47646d77e1ee21e292c88dffd059b4a4d3301e49e919",
+      "bytes": 90394
+    }
+  },
+  "dropped_log_streams": [],
+  "retention": {
+    "local_log_days": 30,
+    "metadata_retention": "milestone",
+    "source": "fixed"
+  }
+}

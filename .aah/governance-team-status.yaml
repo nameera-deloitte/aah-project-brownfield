@@ -4,5 +4,5 @@ permission: null
 repo: nameera-deloitte/aah-project-brownfield
 gate_status: not_configured
 reason: no governance team configured for org 'nameera-deloitte'
-validated_at: '2026-11-23T13:38:53.043135+00:00'
+validated_at: '2026-11-24T13:11:51.197827+00:00'
 override: null

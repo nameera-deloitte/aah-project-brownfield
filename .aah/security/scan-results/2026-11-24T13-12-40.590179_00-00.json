@@ -1,0 +1,69 @@
+{
+  "scan_timestamp": "2026-11-24T13:12:40.590179+00:00",
+  "project_name": "brownfield",
+  "language": "python",
+  "tools": {
+    "semgrep": {
+      "available": false,
+      "version": ""
+    },
+    "trivy": {
+      "available": false,
+      "version": ""
+    },
+    "gitleaks": {
+      "available": true,
+      "version": "8.30.1"
+    },
+    "codeql": {
+      "available": false,
+      "version": ""
+    },
+    "syft": {
+      "available": false,
+      "version": ""
+    },
+    "grype": {
+      "available": false,
+      "version": ""
+    },
+    "nuclei": {
+      "available": false,
+      "version": ""
+    },
+    "cosign": {
+      "available": false,
+      "version": ""
+    }
+  },
+  "summary": {
+    "total_findings": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "suppressed": 0,
+    "errors": 1
+  },
+  "findings": [],
+  "errors": [
+    {
+      "tool": "system",
+      "error_type": "no_tools_available",
+      "message": "No scanning tools available for requested types: sast, secrets, deps, licenses, iac. Missing: semgrep, trivy",
+      "stderr_tail": ""
+    }
+  ],
+  "policy_result": {
+    "passed": false,
+    "reason": "scan_incomplete",
+    "threshold": {
+      "critical": "block",
+      "high": "block",
+      "medium": "warn",
+      "low": "ignore"
+    },
+    "blocking_findings": 0,
+    "max_age_hours": 24
+  }
+}

@@ -2,8 +2,8 @@
   "run_id": "orchestrator",
   "harness_version": "1.1.0",
   "created": "2026-11-23T12:25:28Z",
-  "updated": "2026-11-24T09:29:12Z",
-  "phase": "plan",
+  "updated": "2026-11-24T13:10:47Z",
+  "phase": "deploy",
   "archetype": "brownfield-app-dev",
   "methods": [],
   "active_requirements": [],
@@ -11,7 +11,7 @@
   "retry_counters": {},
   "retry_threshold": 3,
   "artifact_hashes": {},
-  "last_good_checkpoint": "task:plan:plan:inprogress",
+  "last_good_checkpoint": "task:deploy:deploy:inprogress",
   "breaker_tripped": false,
   "escalations": [],
   "notes": [],
@@ -22,9 +22,11 @@
   "completed_phases": [
     "onboarding",
     "discuss",
-    "architecture"
+    "architecture",
+    "plan",
+    "build"
   ],
   "tasks_total": 7,
-  "tasks_completed": 4,
+  "tasks_completed": 6,
   "tasks_inprogress": 1
 }

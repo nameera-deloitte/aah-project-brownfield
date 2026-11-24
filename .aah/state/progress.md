@@ -8,7 +8,7 @@
 - circuit_breaker   : ok
 - open_gates        : (none)
 - active_reqs       : (none)
-- last_checkpoint   : task:plan:plan:inprogress
+- last_checkpoint   : task:deploy:deploy:inprogress
 
 ## ✓ onboarding  (done)
 - ✓ [import] Confirm the existing application is present, scaffold .aah/ over it without touching history, import its codebase intelligence, and arm the ports registry  (done)
@@ -20,11 +20,11 @@
 ## ✓ architecture  (done)
 - ✓ [arch] Define epics, module boundaries against the existing structure, and architecture with the activated design ports  (done)
 
-## ◉ plan  (inprogress)
-- ◉ [plan] Produce standards and module features that account for the existing codebase, the dependency DAG, and GitHub implementation issues  (inprogress)
+## ✓ plan  (done)
+- ✓ [plan] Produce standards and module features that account for the existing codebase, the dependency DAG, and GitHub implementation issues  (done)
 
-## ○ build  (pending)
-- ○ [build] Implement and review each module against the existing code, validate the complete build, refresh the codebase intelligence, and promote to develop  (pending)
+## ✓ build  (done)
+- ✓ [build] Implement and review each module against the existing code, validate the complete build, refresh the codebase intelligence, and promote to develop  (done)
 
-## ○ deploy  (pending)
-- ○ [deploy] Pass governance and security checks, redeploy through the existing release process with staged validation and rollback evidence, and record outputs  (pending)
+## ◉ deploy  (inprogress)
+- ◉ [deploy] Pass governance and security checks, redeploy through the existing release process with staged validation and rollback evidence, and record outputs  (inprogress)

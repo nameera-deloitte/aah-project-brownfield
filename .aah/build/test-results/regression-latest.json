@@ -1,0 +1,37 @@
+{
+  "status": "no_signal",
+  "passed": false,
+  "total_tests": 0,
+  "failed_count": 0,
+  "message": "Missing required environment keys ['ANTHROPIC_API_KEY']: add values to the project root .env (see .env.example), then re-run.",
+  "timestamp": "2026-11-24T11:20:38.639917+00:00",
+  "subject": {
+    "branch": "develop",
+    "commit_sha": "7a6e59279bc914b882408d4878659d19ddc1aaf056833b0c065c44d9a11826c4"
+  },
+  "block": true,
+  "signal_reason": "missing_required_env",
+  "missing_required_env": [
+    "ANTHROPIC_API_KEY"
+  ],
+  "attestation": {
+    "method": "subprocess",
+    "command": [
+      "aah",
+      "agentic",
+      "run",
+      "core.build.run_regression_suite",
+      "--project-path",
+      "C:\\Users\\nambanu\\Downloads\\brownfield"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "7f2946fd89028026a633c1a6e02f1d490d752946c509e464e269d43d06696632",
+    "duration_ms": 1549,
+    "host_pid": 5148,
+    "timestamp": "2026-11-24T11:20:38.823022+00:00",
+    "session_secret_sha256": "4fa4a6a1b99121990f56c75ab1845cea11dd7ecc9d019d80df1c50619ce57a4e",
+    "schema_version": 1,
+    "signature": "470899cd91425d9c58749dfcd4b026980ed3bf0f33182a932a105588c374b040"
+  }
+}

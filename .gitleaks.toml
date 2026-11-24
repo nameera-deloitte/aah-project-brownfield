@@ -1,0 +1,11 @@
+[extend]
+# Extend the default gitleaks config
+useDefault = true
+
+[allowlist]
+description = "Exclude dependency directories and generated files"
+paths = [
+    '''.venv/''',
+    '''node_modules/''',
+    '''__pycache__/''',
+]
