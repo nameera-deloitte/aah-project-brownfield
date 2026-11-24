@@ -2,7 +2,7 @@
   "run_id": "e4e2d0d1-3d0a-4f81-ba3b-b5d181a2f9f4",
   "harness_version": "1.1.0",
   "created": "2026-11-23T12:33:35Z",
-  "updated": "2026-11-24T13:23:58Z",
+  "updated": "2026-11-24T13:33:21Z",
   "phase": "deploy",
   "archetype": "brownfield-app-dev",
   "methods": [],
@@ -62,7 +62,8 @@
     ".github\\workflows\\ci.yml": "e0a24736549fe5c8",
     ".github\\workflows\\cd.yml": "d8a561175122769d",
     ".aah\\deploy\\environments.yaml": "40ee66da020ea28e",
-    ".gitleaksignore": "42ec9d87b66a63ba"
+    ".gitleaksignore": "42ec9d87b66a63ba",
+    ".aah\\audit\\deploy\\audit.md": "d7519b8ed415270b"
   },
   "last_good_checkpoint": "task:deploy:deploy:interrupted",
   "breaker_tripped": false,
@@ -176,7 +177,8 @@
     ".github\\workflows\\ci.yml": 2422,
     ".github\\workflows\\cd.yml": 3379,
     ".aah\\deploy\\environments.yaml": 3456,
-    ".gitleaksignore": 229
+    ".gitleaksignore": 229,
+    ".aah\\audit\\deploy\\audit.md": 1976
   },
   "artifact_status": {
     ".aah\\config\\archetype.json": "written",
@@ -230,7 +232,8 @@
     ".github\\workflows\\ci.yml": "written",
     ".github\\workflows\\cd.yml": "written",
     ".aah\\deploy\\environments.yaml": "written",
-    ".gitleaksignore": "written"
+    ".gitleaksignore": "written",
+    ".aah\\audit\\deploy\\audit.md": "written"
   },
   "tasks_total": 7,
   "tasks_completed": 6,
