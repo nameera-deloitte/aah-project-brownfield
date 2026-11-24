@@ -1,0 +1,232 @@
+# aah:resolved-pipeline-id: brownfield-agentic-app@poc
+project_name: brownfield
+type: brownfield-app-dev
+description: 'Agentic brownfield application workflow: onboard an existing agentic
+  application without scaffolding over it (import the repository and build its codebase
+  intelligence, then connect GitHub), discuss the requested change against that intelligence,
+  design the integration delta, plan each module against the code that already exists,
+  build with TDD and regression evidence, and redeploy only what changed.
+
+  '
+pipeline:
+- phase: onboarding
+  scope: project
+  isMandatory: true
+  depends_on: []
+  capabilities: []
+  gates: []
+  entry_gates: []
+  tasks:
+  - id: import
+    task: Confirm the existing application is present, scaffold .aah/ over it without
+      touching history, import its codebase intelligence, and arm the ports registry
+    depends_on: []
+    entrypoint:
+      command: agentic-brownfield-import
+      location: capability/commands/agentic-brownfield-import.md
+    gates:
+    - type: script
+      name: validate_codebase_intel.py
+      location: capability/gates/validate_codebase_intel.py
+      note: 'the Core 3 + a non-zero profile; the Extended 6 only warn. A task gate,
+        not a phase gate: connect-github is in this phase and has nothing to do with
+        intel'
+    entry_gates: []
+    output_location: .aah/manifest.yaml, .aah/codebase-intel/, .aah/port-registry.yaml,
+      CLAUDE.md
+    human_review: true
+  - id: connect-github
+    task: Register the existing GitHub repository, push develop, enable version control
+      and provision labels and governance-team access
+    depends_on:
+    - task: import
+      consumes: Imported repository on develop with .aah/manifest.yaml, codebase intelligence
+        and the ports registry
+    entrypoint:
+      command: agentic-onboard-github
+      location: capability/commands/agentic-onboard-github.md
+    gates: []
+    entry_gates: []
+    output_location: origin remote, .aah/version-control/, version_control block in
+      .aah/manifest.yaml
+  note: 'Import the existing repository: confirm the code is present, scaffold `.aah/`
+    over it without touching history, build the codebase intelligence, and arm the
+    ports registry. Reuse the existing GitHub repository and governance settings;
+    never create a repository or push as an onboarding side effect. Missing access
+    or conflicting harness state blocks completion until the user resolves it.
+
+    '
+- phase: discuss
+  scope: project
+  isMandatory: true
+  depends_on:
+  - phase: onboarding
+    consumes: Imported repository, codebase intelligence, initialized ports registry,
+      and enabled GitHub version control
+  capabilities: []
+  gates:
+  - type: script
+    name: validate_port_artifacts.py
+    location: capability/gates/validate_port_artifacts.py
+    note: every port bound to this node that fired must be completed with its artifacts
+      on disk, or skipped
+  entry_gates: []
+  tasks:
+  - id: discuss
+    task: Capture intent against the existing system, record the improvement type,
+      walk the decisions, approve the PRD, and compile the activated ports
+    depends_on: []
+    entrypoint:
+      command: agentic-discuss
+      location: capability/commands/agentic-discuss.md
+    gates: []
+    entry_gates: []
+    output_location: .aah/discuss/
+  note: 'The same shared skill as greenfield, behaving differently because the intel
+    exists: Step 2/2b reads the nine intel files, `improvement_type` is recorded,
+    the bug_fix fast path becomes reachable, and pre-resolved inferences carry a codebase
+    source tag. The prohibited-use port runs both passes — the existing system and
+    the new ask.
+
+    '
+- phase: architecture
+  scope: project
+  isMandatory: true
+  depends_on:
+  - phase: discuss
+    consumes: Approved PRD, decision registry, recorded improvement type, and compiled
+      ports
+  capabilities: []
+  gates:
+  - type: script
+    name: validate_port_artifacts.py
+    location: capability/gates/validate_port_artifacts.py
+    note: every port bound to this node that fired must be completed with its artifacts
+      on disk, or skipped
+  entry_gates: []
+  tasks:
+  - id: arch
+    task: Define epics, module boundaries against the existing structure, and architecture
+      with the activated design ports
+    depends_on: []
+    entrypoint:
+      command: agentic-arch
+      location: capability/commands/agentic-arch.md
+    gates: []
+    entry_gates: []
+    output_location: .aah/architecture/
+  note: 'Unchanged from greenfield. The module map for an imported application is
+    carved against the existing structure because the codebase intelligence is already
+    in context from discuss — the architecture phase needs no separate discovery step
+    of its own.
+
+    '
+- phase: plan
+  scope: project
+  isMandatory: true
+  depends_on:
+  - phase: architecture
+    consumes: Epics, module-map.yaml, and design documents
+  capabilities: []
+  gates:
+  - type: script
+    name: validate_port_artifacts.py
+    location: capability/gates/validate_port_artifacts.py
+    note: every port bound to this node that fired must be completed with its artifacts
+      on disk, or skipped
+  entry_gates: []
+  tasks:
+  - id: plan
+    task: Produce standards and module features that account for the existing codebase,
+      the dependency DAG, and GitHub implementation issues
+    depends_on: []
+    entrypoint:
+      command: agentic-brownfield-plan
+      location: capability/commands/agentic-brownfield-plan.md
+    gates: []
+    entry_gates: []
+    output_location: .aah/plan/
+  note: 'The one real difference from greenfield. Each module''s authoring agent surveys
+    the existing code before writing its feature, and records which files already
+    serve the module''s responsibility and whether it extends, modifies, replaces
+    or leaves them — in `## Existing Code Touched`, inside the feature file the implementer
+    actually reads. The Plan Gate parses that section: it blocks on facts (a named
+    path that is not on disk, a row with no action, a missing section) and warns on
+    judgement. The decision belongs here, because by build time the spec already says
+    "create" and the implementer dutifully creates.
+
+    '
+- phase: build
+  scope: project
+  isMandatory: true
+  depends_on:
+  - phase: plan
+    consumes: Validated feature list with recorded existing-code decisions, dag.json,
+      standards, and implementation issues
+  capabilities: []
+  gates:
+  - type: script
+    name: validate_port_artifacts.py
+    location: capability/gates/validate_port_artifacts.py
+    note: every port bound to this node that fired must be completed with its artifacts
+      on disk, or skipped
+  entry_gates: []
+  tasks:
+  - id: build
+    task: Implement and review each module against the existing code, validate the
+      complete build, refresh the codebase intelligence, and promote to develop
+    depends_on: []
+    entrypoint:
+      command: agentic-build
+      location: capability/commands/agentic-build.md
+    gates: []
+    entry_gates: []
+    output_location: application code on develop, .aah/build/, refreshed .aah/codebase-intel/
+  note: 'The same sequential TDD driver as greenfield, with two guarded steps restored:
+    an intel sync at start/resume, and an unconditional one at close — after the checkout
+    to develop and before the final commit, so the intel describes the promoted code
+    and lands in the same commit. Both are non-blocking and both must report what
+    they did. `## Existing Code Touched` reaches the implementer as information, not
+    instruction — a map of what it can reuse where that genuinely fits, obliging it
+    to touch nothing. Where it does change existing behaviour that nothing currently
+    tests, it writes a test for the current behaviour first.
+
+    '
+- phase: deploy
+  scope: project
+  isMandatory: true
+  depends_on:
+  - phase: build
+    consumes: Reviewed release revision, passing regression evidence and completed
+      repository merge approvals
+  - phase: discuss
+    consumes: Confirmed deployment-platform decision and approved change acceptance
+      criteria
+  capabilities: []
+  gates: []
+  entry_gates: []
+  tasks:
+  - id: deploy
+    task: Pass governance and security checks, redeploy through the existing release
+      process with staged validation and rollback evidence, and record outputs
+    depends_on: []
+    entrypoint:
+      command: agentic-deploy
+      location: capability/commands/agentic-deploy.md
+    gates: []
+    entry_gates: []
+    output_location: .aah/deploy/
+    human_review: true
+  note: 'Re-check governance access and security findings before any deployment. Use
+    the existing deployment platform and CI/CD process unless a platform change was
+    explicitly approved. Require a reviewed release/rollback plan, migration recovery
+    strategy and explicit target environment approval before writes. Validate in staging,
+    then use an approved rollout with smoke tests and agent evaluations; record monitoring
+    and rollback outcomes. The serverless route''s step 1.8a detects a prior deployment
+    and offers to redeploy only the services that changed, keeping every unchanged
+    service on its existing URL. No port is bound to deploy, so no port gate is declared
+    here.
+
+    '
+feature_workflow: false
+hook_profile: agentic-app

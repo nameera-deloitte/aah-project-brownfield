@@ -1,0 +1,35 @@
+generated_at: "2026-11-23T12:25:28Z"
+phases:
+  - phase: onboarding
+    tasks:
+      - id: import
+        task: "Confirm the existing application is present, scaffold .aah/ over it without touching history, import its codebase intelligence, and arm the ports registry"
+        status: done
+      - id: connect-github
+        task: "Register the existing GitHub repository, push develop, enable version control and provision labels and governance-team access"
+        status: done
+  - phase: discuss
+    tasks:
+      - id: discuss
+        task: "Capture intent against the existing system, record the improvement type, walk the decisions, approve the PRD, and compile the activated ports"
+        status: done
+  - phase: architecture
+    tasks:
+      - id: arch
+        task: "Define epics, module boundaries against the existing structure, and architecture with the activated design ports"
+        status: done
+  - phase: plan
+    tasks:
+      - id: plan
+        task: "Produce standards and module features that account for the existing codebase, the dependency DAG, and GitHub implementation issues"
+        status: inprogress
+  - phase: build
+    tasks:
+      - id: build
+        task: "Implement and review each module against the existing code, validate the complete build, refresh the codebase intelligence, and promote to develop"
+        status: pending
+  - phase: deploy
+    tasks:
+      - id: deploy
+        task: "Pass governance and security checks, redeploy through the existing release process with staged validation and rollback evidence, and record outputs"
+        status: pending

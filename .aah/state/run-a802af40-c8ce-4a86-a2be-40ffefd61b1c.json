@@ -1,0 +1,50 @@
+{
+  "run_id": "a802af40-c8ce-4a86-a2be-40ffefd61b1c",
+  "harness_version": "1.1.0",
+  "created": "2026-11-23T12:35:38Z",
+  "updated": "2026-11-24T08:49:15Z",
+  "phase": "architecture",
+  "archetype": "brownfield-app-dev",
+  "methods": [],
+  "active_requirements": [],
+  "open_gates": [],
+  "retry_counters": {},
+  "retry_threshold": 3,
+  "artifact_hashes": {
+    ".aah\\config\\archetype.json": "5a3fa018ef072715",
+    ".aah\\config\\interview-archetype.md": "55fb8791f6715f98",
+    "..\\..\\AppData\\Local\\Temp\\claude\\c06599071732ae23\\a802af40-c8ce-4a86-a2be-40ffefd61b1c\\scratchpad\\aah-review.html": "82d235b728bfd6bd"
+  },
+  "last_good_checkpoint": "task:architecture:arch:interrupted",
+  "breaker_tripped": false,
+  "escalations": [],
+  "notes": [
+    "phase -> onboarding (from pipeline_state)",
+    "subagent stop: unknown",
+    "phase -> discuss (from pipeline_state)",
+    "subagent stop: unknown",
+    "subagent stop: unknown",
+    "subagent stop: unknown",
+    "subagent stop: unknown",
+    "phase -> architecture (from pipeline_state)",
+    "subagent stop: unknown"
+  ],
+  "model_overrides": {},
+  "composed_plan": [],
+  "plan_status": "inprogress",
+  "context_intelligence": null,
+  "completed_phases": [],
+  "artifact_sizes": {
+    ".aah\\config\\archetype.json": 92,
+    ".aah\\config\\interview-archetype.md": 711,
+    "..\\..\\AppData\\Local\\Temp\\claude\\c06599071732ae23\\a802af40-c8ce-4a86-a2be-40ffefd61b1c\\scratchpad\\aah-review.html": 74597
+  },
+  "artifact_status": {
+    ".aah\\config\\archetype.json": "written",
+    ".aah\\config\\interview-archetype.md": "written",
+    "..\\..\\AppData\\Local\\Temp\\claude\\c06599071732ae23\\a802af40-c8ce-4a86-a2be-40ffefd61b1c\\scratchpad\\aah-review.html": "written"
+  },
+  "tasks_total": 7,
+  "tasks_completed": 3,
+  "tasks_inprogress": 1
+}

@@ -1,0 +1,46 @@
+modules:
+
+  - id: MOD-000
+    name: test-scaffolding
+    description: "pytest + pytest-asyncio dev dependency; tests/ package with shared conftest fixtures (mock Anthropic client and async mock Playwright page). Non-demoable infrastructure consumed by MOD-002's test suite."
+    demo_criteria: "pytest --collect-only exits 0 on the tests/ package; pip install -r requirements-dev.txt completes without error."
+    smoke_test: "pip install -r requirements-dev.txt && pytest --collect-only"
+    layers:
+      tests:
+        - requirements-dev.txt
+        - tests/__init__.py
+        - tests/conftest.py
+    depends_on: []
+    cloud_services: []
+
+  - id: MOD-001
+    name: capability-auth
+    description: "Annotate all 11 tools with a CAPABILITY_MAP; add pre-execution capability check to execute_tool() (agentic_app.py) and _run_tool() (agentic_tester.py); raise CapabilityError on blocked calls. Add MAX_ITERATIONS = 20 guard to agentic_tester.py."
+    demo_criteria: "Calling execute_tool(\"write_file\", ...) with filesystem.write blocked returns CapabilityError; calling _run_tool(\"open_page\", ...) with browser.navigate blocked returns CapabilityError; agentic_tester.MAX_ITERATIONS == 20."
+    smoke_test: "python -c \"from agentic_app import CAPABILITY_MAP; assert len(CAPABILITY_MAP) == 5\" && python -c \"from agentic_tester import CAPABILITY_MAP, MAX_ITERATIONS; assert len(CAPABILITY_MAP) == 6; assert MAX_ITERATIONS == 20\""
+    layers:
+      agent:
+        - "agentic_app.py:execute_tool (capability check + CapabilityError)"
+        - "agentic_tester.py:_run_tool (async capability check + CapabilityError)"
+        - "agentic_tester.py:MAX_ITERATIONS = 20"
+      tools:
+        - "agentic_app.py:CAPABILITY_MAP (5 tools: read_file, list_files, run_command, write_file, search_in_file)"
+        - "agentic_tester.py:CAPABILITY_MAP (6 tools: open_page, click_button, fill_and_submit, resize_viewport, get_computed_style, record_result)"
+    depends_on: [MOD-000]
+    cloud_services: []
+
+  - id: MOD-002
+    name: test-suite-and-evals
+    description: "pytest unit tests for execute_tool and _run_tool (capability validation, file ops, command safety); parametrized golden-set test for run_command safety decisions; MAX_ITERATIONS regression test."
+    demo_criteria: "pytest tests/ -v completes with all tests passing; tests/golden/run_command_golden.yaml contains allow and block cases covering known-good and adversarial command inputs."
+    smoke_test: "pytest tests/ -v"
+    layers:
+      tests:
+        - tests/test_execute_tool.py
+        - tests/test_run_tool.py
+        - tests/test_iteration_cap.py
+        - tests/test_golden.py
+      evals:
+        - tests/golden/run_command_golden.yaml
+    depends_on: [MOD-001]
+    cloud_services: []

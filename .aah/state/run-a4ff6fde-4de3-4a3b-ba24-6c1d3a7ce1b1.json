@@ -1,0 +1,40 @@
+{
+  "run_id": "a4ff6fde-4de3-4a3b-ba24-6c1d3a7ce1b1",
+  "harness_version": "1.1.0",
+  "created": "2026-11-23T13:59:17Z",
+  "updated": "2026-11-24T04:51:28Z",
+  "phase": "discuss",
+  "archetype": "brownfield-app-dev",
+  "methods": [],
+  "active_requirements": [],
+  "open_gates": [],
+  "retry_counters": {},
+  "retry_threshold": 3,
+  "artifact_hashes": {
+    ".aah\\config\\archetype.json": "5a3fa018ef072715",
+    ".aah\\config\\interview-archetype.md": "55fb8791f6715f98"
+  },
+  "last_good_checkpoint": "task:discuss:discuss:interrupted",
+  "breaker_tripped": false,
+  "escalations": [],
+  "notes": [
+    "phase -> discuss (from pipeline_state)",
+    "subagent stop: unknown"
+  ],
+  "model_overrides": {},
+  "composed_plan": [],
+  "plan_status": "inprogress",
+  "context_intelligence": null,
+  "completed_phases": [],
+  "artifact_sizes": {
+    ".aah\\config\\archetype.json": 92,
+    ".aah\\config\\interview-archetype.md": 711
+  },
+  "artifact_status": {
+    ".aah\\config\\archetype.json": "written",
+    ".aah\\config\\interview-archetype.md": "written"
+  },
+  "tasks_total": 7,
+  "tasks_completed": 2,
+  "tasks_inprogress": 1
+}

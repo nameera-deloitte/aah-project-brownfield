@@ -1,0 +1,48 @@
+schema_version: "1.0"
+classified_at: "2026-11-24T00:00:00Z"
+tool_type: "Client-facing"
+overall_risk_band: "High"
+total_score: 9
+max_possible_score: 12
+
+dimensions:
+  - id: DIM-001
+    label: Consequence Severity
+    rating: "High"
+    score: 2
+    justification: "User confirmed a bad output could become visible outside Deloitte or the client (Q1=Yes), meeting the external reputational exposure threshold."
+
+  - id: DIM-002
+    label: Intended Usage
+    rating: "High"
+    score: 2
+    justification: "Both agents are purpose-built for specific defined workflows — agentic_app.py for coding assistance and agentic_tester.py for browser QA — not a general-purpose assistant."
+
+  - id: DIM-003
+    label: Autonomy
+    rating: "Low"
+    score: 0
+    justification: "User confirmed formal sign-off is required after every individual AI output before the process continues."
+
+  - id: DIM-004
+    label: Complexity
+    rating: "High"
+    score: 2
+    justification: "Both agents use a tool-calling agentic loop (execute_tool / _run_tool) where Claude itself decides which tool to invoke at runtime — unmistakable agentic orchestration signal."
+
+  - id: DIM-005
+    label: Data Sensitivity
+    rating: "High"
+    score: 2
+    justification: "User confirmed the tool processes data that identifies or could be linked back to a specific individual, client, or org (Q1=Yes)."
+
+  - id: DIM-006
+    label: Authority & Interconnectivity
+    authority_rating: "Medium"
+    authority_score: 1
+    authority_justification: "Agent writes to the local filesystem (write_file) and executes shell commands (run_command) — a non-critical system with developer approval at each step."
+    interconnectivity_rating: "Medium"
+    interconnectivity_score: 1
+    interconnectivity_justification: "Two Claude-based agents (main agent + QA agent) in the project, each with their own agentic loop — 1-2 AI components in the pipeline."
+    score: 1
+    justification: "max(Authority=1, Interconnectivity=1) = 1 — both sub-criteria land at Medium."

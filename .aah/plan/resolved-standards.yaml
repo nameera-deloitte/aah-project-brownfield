@@ -1,0 +1,113 @@
+generated_at: '2026-11-24T09:40:23.852931+00:00'
+project: brownfield
+stack:
+  language: ''
+  framework: ''
+  domain: ''
+sources:
+- type: industry-default
+  file: industry-defaults.yaml
+  rules_loaded: 12
+rules:
+- id: PY-SEC-001
+  category: security
+  priority: critical
+  description: No hardcoded credentials, API keys, tokens, or secrets in source code.
+    This includes passwords, connection strings, and signing keys.
+  remediation: Use environment variables, a .env file excluded from version control,
+    or a secrets manager (e.g., AWS Secrets Manager, HashiCorp Vault).
+  source: industry-default
+- id: PY-SEC-002
+  category: security
+  priority: critical
+  description: Never use string formatting, concatenation, or f-strings to build SQL
+    queries. This includes format(), %, f'', and + operators inside execute() calls.
+  remediation: Use SQLAlchemy ORM, parameterized queries with bind parameters, or
+    prepared statements.
+  source: industry-default
+- id: PY-SEC-003
+  category: security
+  priority: critical
+  description: Validate and sanitize all external input — user input, API parameters,
+    query strings, headers, file uploads, and webhook payloads.
+  remediation: Use Pydantic models, marshmallow schemas, or cerberus for input validation
+    at the boundary.
+  source: industry-default
+- id: PY-SEC-004
+  category: security
+  priority: high
+  description: Do not use pickle, eval(), exec(), or __import__() on untrusted data.
+    These allow arbitrary code execution.
+  remediation: Use JSON, MessagePack, or Protocol Buffers for serialization. Use ast.literal_eval()
+    for safe evaluation of literals.
+  source: industry-default
+- id: PY-TEST-001
+  category: testing
+  priority: high
+  description: New feature code must have at least 80% line coverage with functional
+    tests. No mock frameworks allowed — all tests must run against real services.
+  remediation: Add functional tests covering public functions, edge cases, and error
+    paths. Use real database, real API calls.
+  source: industry-default
+- id: PY-ERR-001
+  category: error_handling
+  priority: high
+  description: Never use bare 'except:' or 'except Exception:' as a catch-all. Always
+    catch specific exception types.
+  remediation: Replace bare except with specific exceptions (ValueError, KeyError,
+    ConnectionError, etc.).
+  source: industry-default
+- id: PY-ERR-002
+  category: error_handling
+  priority: medium
+  description: Do not silently swallow exceptions with empty except blocks. At minimum,
+    log the error.
+  remediation: Add logging.exception() or logging.error() inside except blocks, or
+    re-raise with context.
+  source: industry-default
+- id: PY-PERF-001
+  category: performance
+  priority: medium
+  description: Use async/await for I/O-bound operations when running in an async framework
+    (FastAPI, aiohttp). Do not call synchronous I/O (requests, time.sleep, open())
+    inside async functions.
+  remediation: Use httpx.AsyncClient, asyncio.sleep(), aiofiles, or run_in_executor()
+    for blocking calls.
+  source: industry-default
+- id: PY-PERF-002
+  category: performance
+  priority: medium
+  description: Avoid loading entire datasets into memory. Use generators, iterators,
+    or streaming for large data processing.
+  remediation: Use yield, itertools, or database cursors with fetchmany() instead
+    of fetchall().
+  source: industry-default
+- id: PY-CONV-001
+  category: conventions
+  priority: low
+  description: 'Follow PEP 8 naming: snake_case for functions, methods, and variables;
+    PascalCase for classes; UPPER_SNAKE_CASE for module-level constants.'
+  remediation: Rename identifiers to match PEP 8 conventions.
+  source: industry-default
+- id: PY-CONV-002
+  category: conventions
+  priority: low
+  description: Use type hints for all public function parameters and return values.
+    Internal/private helpers may omit hints.
+  remediation: Add type annotations using built-in types (list, dict, str) or typing
+    module.
+  source: industry-default
+- id: PY-CONV-003
+  category: conventions
+  priority: low
+  description: 'Organize imports in three groups separated by blank lines: stdlib,
+    third-party, local. Use absolute imports.'
+  remediation: Reorder imports following PEP 8 / isort conventions.
+  source: industry-default
+summary:
+  total: 12
+  critical: 3
+  high: 3
+  medium: 3
+  low: 3
+  disabled: []

@@ -1,6 +1,6 @@
 schema_version: '2.0'
 initialized_at: '2026-11-23T12:37:46Z'
-compiled_at: null
+compiled_at: '2026-11-24T07:04:44Z'
 source_catalog: registry/agentic-app-ports.yaml
 spine_order:
 - onboarding
@@ -68,7 +68,76 @@ activities:
   - .aah/risk-classification.yaml
   - .aah/risk-classification-report.md
   trigger_reason: null
-  status: pending
+  status: completed
+  started_at: '2026-11-24T09:05:47Z'
+  completed_at: '2026-11-24T09:19:34Z'
+  artifacts_produced:
+  - .aah/risk-classification.yaml
+- id: ACT-UX
+  ref: agentic-app-ux
+  type: skill
+  impl_status: available
+  target: architecture
+  position: within
+  anchor: post-module-map
+  order: 10
+  depends_on: []
+  triggered_by:
+    type: discuss
+    slug_id: custom-ui-required
+    option: 'yes'
+  consumes:
+  - .aah/discuss/project-intent.yaml
+  - .aah/architecture/module-map.yaml
+  produces:
+  - .aah/architecture/applications_wireframes/README.md
+  trigger_reason: neither activates[] nor a triggered_by answer match — did not fire
+  status: skipped
+  started_at: null
+  completed_at: null
+  artifacts_produced: []
+- id: ACT-BACKEND-PLATFORM-AGENTCORE
+  ref: agentic-app-agentcore-conventions
+  type: skill
+  impl_status: available
+  target: architecture
+  position: within
+  anchor: post-module-map
+  order: 20
+  depends_on:
+  - ACT-UX
+  triggered_by:
+    type: discuss
+    slug_id: backend-compute-platform
+    option: agentcore-runtime
+  consumes:
+  - .aah/discuss/decision-registry.yaml
+  - .aah/architecture/module-map.yaml
+  produces:
+  - .aah/architecture/backend-platform-conventions.md
+  trigger_reason: neither activates[] nor a triggered_by answer match — did not fire
+  status: skipped
+  started_at: null
+  completed_at: null
+  artifacts_produced: []
+- id: ACT-ACCESS
+  ref: agentic-app-access
+  type: skill
+  impl_status: available
+  target: architecture
+  position: before
+  anchor: null
+  order: 10
+  depends_on: []
+  triggered_by:
+    type: discuss
+    slug_id: cloud-vs-local
+    option: cloud
+  consumes: []
+  produces:
+  - .aah/architecture/cloud-readiness.yaml
+  trigger_reason: neither activates[] nor a triggered_by answer match — did not fire
+  status: skipped
   started_at: null
   completed_at: null
   artifacts_produced: []
