@@ -1,6 +1,6 @@
 project_name: brownfield
 project_type: brownfield
-current_phase: build
+current_phase: deploy
 complexity_tier: null
 completed_artifacts: []
 stack_choices:
@@ -22,7 +22,7 @@ delegated_to: null
 delegation_timestamp: null
 synthesis_mode: null
 created_at: '2026-11-23T12:31:02.389707+00:00'
-updated_at: '2026-11-24T13:11:51.210636+00:00'
+updated_at: '2026-11-24T13:24:36.081057+00:00'
 version_control:
   enabled: true
   provider: github
