@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": "F-MOD-000",
+      "module_ref": "MOD-000",
+      "layers": [
+        "tests"
+      ]
+    },
+    {
+      "id": "F-MOD-001",
+      "module_ref": "MOD-001",
+      "layers": [
+        "agent",
+        "tools"
+      ],
+      "dependencies": [
+        "F-MOD-000"
+      ]
+    },
+    {
+      "id": "F-MOD-002",
+      "module_ref": "MOD-002",
+      "layers": [
+        "tests",
+        "evals"
+      ],
+      "dependencies": [
+        "F-MOD-001"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "F-MOD-000",
+      "to": "F-MOD-001"
+    },
+    {
+      "from": "F-MOD-001",
+      "to": "F-MOD-002"
+    }
+  ]
+}
