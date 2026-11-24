@@ -4,10 +4,28 @@ This module provides mock infrastructure so tests run fully offline:
 no Anthropic API calls and no Chromium browser processes are started.
 """
 
+import sys
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock
 
 import pytest
+
+# ---------------------------------------------------------------------------
+# Windows MAX_PATH guard
+# ---------------------------------------------------------------------------
+# The AAH regression suite runs in a long temp-dir path
+# (~68 chars just for the dir name).  Combined with the deeply-nested beta
+# types in the anthropic 2.x SDK, the full module path easily exceeds
+# Windows' 260-char MAX_PATH limit, causing ModuleNotFoundError even when
+# the file exists on disk.  Pre-registering a lightweight stub prevents
+# "import anthropic" in agentic_app/agentic_tester from hitting that path.
+# Neither module uses anthropic at import time (client = anthropic.Anthropic()
+# is only called inside run_agent() / run()), so this stub is transparent.
+if "anthropic" not in sys.modules:
+    _stub = MagicMock(name="anthropic")
+    _stub.Anthropic = MagicMock
+    _stub.AsyncAnthropic = MagicMock
+    sys.modules["anthropic"] = _stub
 
 # ── mock_anthropic_client ─────────────────────────────────────────────────────
 
