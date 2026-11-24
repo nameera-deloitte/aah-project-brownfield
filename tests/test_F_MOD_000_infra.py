@@ -20,12 +20,13 @@ PROJECT_ROOT = Path(__file__).parent.parent
 
 
 def test_F_MOD_000_requirements_dev_txt_content():
-    """requirements-dev.txt must list pytest>=8 and pytest-asyncio."""
+    """requirements-dev.txt must list pytest>=8; pytest-asyncio lives in requirements.txt."""
     req_path = PROJECT_ROOT / "requirements-dev.txt"
     assert req_path.exists(), "requirements-dev.txt must exist at the project root"
     text = req_path.read_text()
     assert "pytest>=8" in text, "pytest>=8 must appear in requirements-dev.txt"
-    assert "pytest-asyncio" in text, "pytest-asyncio must appear in requirements-dev.txt"
+    # pytest-asyncio is intentionally in requirements.txt (not requirements-dev.txt) so the
+    # regression suite (which uses --with-requirements requirements.txt) can run async tests.
 
 
 def test_F_MOD_000_requirements_no_conflict_with_production():
