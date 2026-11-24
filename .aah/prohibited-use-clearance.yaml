@@ -1,0 +1,43 @@
+status: cleared
+checked_at: "2026-11-23T14:00:00Z"
+project_type: brownfield
+evaluator: agentic-app-prohibited-use
+passes:
+  - input_file: .aah/codebase-intel/codebase-learning.md
+    tool_description: >-
+      A two-agent Python application: (1) a multi-turn AI coding assistant
+      (agentic_app.py) with 5 tools — read_file, list_files, run_command,
+      write_file, search_in_file — that explores and answers questions about
+      a local project directory using claude-opus-5-5; (2) a QA agent
+      (agentic_tester.py) that drives a headless Playwright Chromium browser
+      to verify behaviors in an HTML web application against a behavior catalog.
+      No network servers, no user-facing UI, no biometric or personal data processed.
+    result: cleared
+    puc_evaluations:
+      - { id: PUC-001, label: "Manipulative or Deceptive Techniques", result: cleared }
+      - { id: PUC-002, label: "Exploitation of Vulnerable Persons", result: cleared }
+      - { id: PUC-003, label: "Social Scoring by Public Authorities", result: cleared }
+      - { id: PUC-004, label: "Criminal Risk Assessment via Profiling", result: cleared }
+      - { id: PUC-005, label: "Facial Recognition Database via Image Scraping", result: cleared }
+      - { id: PUC-006, label: "Emotion Inference in Workplace or Educational Settings", result: cleared }
+      - { id: PUC-007, label: "Biometric Categorisation Revealing Sensitive Traits", result: cleared }
+      - { id: PUC-008, label: "Real-Time Remote Biometric Identification in Public Spaces", result: cleared }
+  - input_file: knowledge/project-brief.md
+    tool_description: >-
+      Security hardening of the existing agentic application: replace the
+      run_command keyword denylist with a safelist approach, wire check_env()
+      at application startup, add ANTHROPIC_API_KEY to REQUIRED_ENV, and
+      add authentication/authorisation for outbound tool calls. Developer
+      tooling with no user-facing UI, no biometric data, and no targeting
+      of individuals.
+    result: cleared
+    puc_evaluations:
+      - { id: PUC-001, label: "Manipulative or Deceptive Techniques", result: cleared }
+      - { id: PUC-002, label: "Exploitation of Vulnerable Persons", result: cleared }
+      - { id: PUC-003, label: "Social Scoring by Public Authorities", result: cleared }
+      - { id: PUC-004, label: "Criminal Risk Assessment via Profiling", result: cleared }
+      - { id: PUC-005, label: "Facial Recognition Database via Image Scraping", result: cleared }
+      - { id: PUC-006, label: "Emotion Inference in Workplace or Educational Settings", result: cleared }
+      - { id: PUC-007, label: "Biometric Categorisation Revealing Sensitive Traits", result: cleared }
+      - { id: PUC-008, label: "Real-Time Remote Biometric Identification in Public Spaces", result: cleared }
+compliance_notes: ""

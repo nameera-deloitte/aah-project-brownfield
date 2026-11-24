@@ -1,0 +1,211 @@
+schema_version: '1.0'
+project: brownfield
+complexity: poc
+archetype: ai-applications
+domain_ids: []
+archetypes:
+- ai-applications
+started_at: '2026-11-24'
+confirmed_areas:
+- Scope & Prioritization
+- Agentic Safeguards
+pre_resolved:
+- slug_id: data-pipeline-delivery
+  value: 'no'
+  source: inferred
+  locked: true
+  activates: []
+  notes: 'source-detail: knowledge/project-brief.md · brief: ''Improve security of
+    the existing agentic application'' — Python CLI tool; no data platform, ETL pipeline,
+    or migration signals present'
+- slug_id: cloud-vs-local
+  value: local
+  source: codebase
+  locked: true
+  activates: []
+  notes: 'source-detail: .aah/codebase-intel/codebase-learning.md · code: ''Build
+    system: none; pure Python, run directly. No server, no deployment config, no container
+    or infrastructure'''
+- slug_id: data-storage-present
+  value: 'no'
+  source: codebase
+  locked: true
+  activates: []
+  notes: 'source-detail: .aah/codebase-intel/codebase-learning.md · code: ''No persistent
+    data stores. All data is in-memory and scoped to a single run'''
+- slug_id: custom-ui-required
+  value: 'no'
+  source: codebase
+  locked: true
+  activates: []
+  notes: 'source-detail: .aah/codebase-intel/codebase-learning.md · code: ''No HTTP
+    server, no REST endpoints. Both agents are CLI Python scripts consumed directly'''
+decisions:
+- slug_id: data-pipeline-delivery
+  area: routing
+  question: Is this a data-pipeline delivery?
+  options_presented:
+  - 'yes'
+  - 'no'
+  options_eliminated: []
+  response: 'no'
+  response_type: single-select
+  source: user
+  activates: []
+  notes: 'Route=application: no data signals, agentic app counter-signals present'
+- slug_id: compliance-regimes
+  area: Security & Compliance
+  question: Which compliance regimes apply to this system?
+  options_presented:
+  - hipaa
+  - soc2
+  - gdpr
+  - pci-dss
+  - on-prem
+  - air-gapped
+  - sovereign
+  - none
+  options_eliminated: []
+  response: '[on-prem]'
+  response_type: multi-select
+  source: user
+  activates: []
+  notes: User selected on-premises only — consistent with cloud-vs-local=local; local
+    developer tool, no cloud deployment
+- slug_id: docker-installed
+  area: Infrastructure
+  question: Do you have Docker or a compatible container runtime installed?
+  options_presented:
+  - 'yes'
+  - 'no'
+  options_eliminated: []
+  response: 'no'
+  response_type: single-select
+  source: user
+  activates: []
+  notes: No container runtime — this is a local Python CLI tool; no containerisation
+    needed
+- slug_id: technical-archetype
+  area: Domain & Archetype
+  question: Which technical archetype(s) apply?
+  options_presented:
+  - ai-applications
+  - ai-infra-platforms
+  - aws-native-services
+  options_eliminated: []
+  response:
+  - ai-applications
+  response_type: multi-select
+  source: user
+  activates: []
+  notes: 'confirmed: project is an agentic workflow coding assistant — ai-applications
+    playbook applies'
+- slug_id: business-domain
+  area: Domain & Archetype
+  question: Which business domain(s) does this project target?
+  options_presented:
+  - financial-services
+  options_eliminated: []
+  response: []
+  response_type: multi-select
+  source: user
+  activates: []
+  notes: 'no domain match: project is developer tooling (security hardening of a Python
+    agentic app), not a financial-services use case'
+- slug_id: security-gap-scope
+  area: Scope & Prioritization
+  question: Which of the 6 security gaps are in scope for this PoC?
+  options_presented:
+  - run_command-safelist
+  - check_env-wiring
+  - required_env-hardening
+  - auth-outbound-calls
+  - unit-tests-evals
+  - browser-state-isolation
+  options_eliminated:
+  - run_command-safelist
+  - check_env-wiring
+  - required_env-hardening
+  - browser-state-isolation
+  response:
+  - auth-outbound-calls
+  - unit-tests-evals
+  response_type: multi-select
+  source: user
+  activates: []
+  notes: 'user selected: auth for outbound calls and unit tests/evals. Deferred: safelist,
+    check_env wiring, REQUIRED_ENV, browser isolation'
+- slug_id: eval-suite-scope
+  area: Agentic Safeguards
+  question: What level of test/eval coverage should we add?
+  options_presented:
+  - unit-tests-only
+  - unit-tests-golden-set
+  - full-eval-harness
+  options_eliminated: []
+  response: unit-tests-golden-set
+  response_type: single-select
+  source: user
+  activates: []
+  notes: pytest unit tests for execute_tool and _run_tool, plus a small golden input/expected-output
+    set for run_command safety checks
+- slug_id: auth-outbound-approach
+  area: Agentic Safeguards
+  question: What auth/authz mechanism for outbound tool calls?
+  options_presented:
+  - api-key-env-var-only
+  - capability-scoped-per-tool
+  - signed-request-envelope
+  options_eliminated: []
+  response: capability-scoped-per-tool
+  response_type: single-select
+  source: user
+  activates: []
+  notes: annotate each tool with allowed capabilities; validate capability before
+    tool execution proceeds
+- slug_id: tester-iteration-cap
+  area: Agentic Safeguards
+  question: Should we add an iteration cap to agentic_tester.py?
+  options_presented:
+  - 'yes'
+  - 'no'
+  options_eliminated: []
+  response: 'yes'
+  response_type: single-select
+  source: user
+  activates: []
+  notes: add MAX_ITERATIONS matching main agent (20); prevents runaway loop if model
+    never stops calling tools
+  emergent: true
+deferred_ideas: []
+constraint_audit:
+  passed: true
+  ran_at: '2026-11-24'
+  checks:
+    A_mandatory_coverage:
+      result: pass
+      detail: clean
+    B_forbidden_options:
+      result: pass
+      detail: clean
+    C_whitelist:
+      result: pass
+      detail: clean
+    D_service_scope:
+      result: pass
+      detail: clean
+    E_mandated_options:
+      result: pass
+      detail: clean
+    F_provenance:
+      result: pass
+      detail: clean
+  violations: []
+  flags: []
+  warnings: []
+active_references:
+  computed_at: '2026-11-24'
+  guidance_references: []
+  domain_brief_paths: []
+  archetype_playbook_paths:
+  - build-playbooks/ai-applications/build-playbook.yaml

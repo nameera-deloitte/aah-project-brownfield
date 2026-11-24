@@ -1,0 +1,35 @@
+raw_statement: >-
+  Improve security of the existing agentic application. Known gaps: run_command
+  keyword denylist (easily bypassed), check_env() not called at startup,
+  REQUIRED_ENV tuple is empty, no authentication/authorisation for outbound tool
+  calls beyond the API key, no unit tests or evaluations on the tool execution
+  path, module-global browser state in agentic_tester.py not safe for concurrent use.
+
+improvement_type: enhancement
+
+target_areas:
+  - command-safety
+  - env-validation
+  - testing
+  - agentic-security
+
+constraints:
+  - Existing Python codebase — no full rewrite
+  - Must wire check_env() at both agent entry points
+  - ANTHROPIC_API_KEY must be added to REQUIRED_ENV
+  - run_command must move from denylist to safelist approach
+
+technical_domains:
+  - ai_ml
+  - python_backend
+
+integration_surface: 2
+# Integrations: Anthropic API (outbound inference), Playwright Chromium (browser automation)
+
+route: application
+route_evidence: >-
+  No data-platform, data-estate, or data-deliverable signals found. The project
+  brief and codebase describe a Python CLI coding assistant and browser QA agent.
+  Counter-signals present: two named agentic application files, explicit
+  "agentic application" terminology, no STTM/lineage/data-dictionary asks.
+  Route = application.
