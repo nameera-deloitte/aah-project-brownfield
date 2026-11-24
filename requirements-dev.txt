@@ -1,0 +1,3 @@
+pytest>=8
+pytest-asyncio
+ruff>=0.4
