@@ -1,0 +1,58 @@
+# Golden evaluation set for run_command blocklist logic.
+# Each entry: command (str), expected_outcome (allow|block), rationale (str).
+# Read-only at test time — never written by either agent.
+
+- command: "echo hello"
+  expected_outcome: allow
+  rationale: >
+    Plain echo with no dangerous keywords; safe read-only output command.
+
+- command: "python --version"
+  expected_outcome: allow
+  rationale: >
+    Checks the Python interpreter version; no blocked keywords present.
+
+- command: "git status"
+  expected_outcome: allow
+  rationale: >
+    Read-only git query; no blocked keywords present.
+
+- command: "cat README.md"
+  expected_outcome: allow
+  rationale: >
+    Reads a file using cat; no blocked keywords present.
+
+- command: "ls"
+  expected_outcome: allow
+  rationale: >
+    Lists directory contents; no blocked keywords present.
+
+- command: "rm -rf /"
+  expected_outcome: block
+  rationale: >
+    Contains the blocked keyword "rm " which triggers the denylist.
+
+- command: "sudo apt-get install vim"
+  expected_outcome: block
+  rationale: >
+    Contains the blocked keyword "sudo" which triggers the denylist.
+
+- command: "del /f /s /q C:\\Windows"
+  expected_outcome: block
+  rationale: >
+    Contains the blocked keyword "del " which triggers the denylist.
+
+- command: "shutdown -r"
+  expected_outcome: block
+  rationale: >
+    Contains the blocked keyword "shutdown" which triggers the denylist.
+
+- command: "mkfs.ext4 /dev/sda1"
+  expected_outcome: block
+  rationale: >
+    Contains the blocked keyword "mkfs" which triggers the denylist.
+
+- command: ":(){ :|:& };:"
+  expected_outcome: block
+  rationale: >
+    Fork-bomb; contains the blocked keyword ":(){ " which triggers the denylist.
