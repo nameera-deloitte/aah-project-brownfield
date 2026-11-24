@@ -32,6 +32,21 @@ MAX_TOKENS = 16000
 PROJECT_ROOT = Path(__file__).parent           # working directory for tools
 MAX_ITERATIONS = 20                            # safety cap on the agent loop
 
+# ─── Capability Gate ──────────────────────────────────────────────────────────
+
+
+class CapabilityError(Exception):
+    """Raised when a tool call is not covered by the agent's capability map."""
+
+
+CAPABILITY_MAP: dict[str, list[str]] = {
+    "read_file": ["filesystem.read"],
+    "list_files": ["filesystem.read"],
+    "run_command": ["shell.exec"],
+    "write_file": ["filesystem.write"],
+    "search_in_file": ["filesystem.read"],
+}
+
 # ─── Tool Definitions ─────────────────────────────────────────────────────────
 
 TOOLS: list[dict] = [
@@ -141,6 +156,12 @@ TOOLS: list[dict] = [
 
 def execute_tool(name: str, inputs: dict) -> str:
     """Run a tool and return its result as a string."""
+
+    # Pre-dispatch capability check
+    if name not in CAPABILITY_MAP:
+        raise CapabilityError(
+            f"Tool '{name}' is not in the capability map and cannot be dispatched."
+        )
 
     if name == "read_file":
         file_path = PROJECT_ROOT / inputs["path"]

@@ -28,6 +28,24 @@ _browser: Browser | None = None
 _page: Page | None = None
 _results: list[dict] = []
 
+# ── Capability Gate ────────────────────────────────────────────────────────────
+
+
+class CapabilityError(Exception):
+    """Raised when a tool call is not covered by the QA agent's capability map."""
+
+
+CAPABILITY_MAP: dict[str, list[str]] = {
+    "open_page": ["browser.navigate"],
+    "click_button": ["browser.interact"],
+    "fill_and_submit": ["browser.interact", "browser.submit"],
+    "resize_viewport": ["browser.viewport"],
+    "get_computed_style": ["browser.read"],
+    "record_result": ["memory.write"],
+}
+
+MAX_ITERATIONS = 20
+
 # ── Tool schemas ──────────────────────────────────────────────────────────────
 TOOLS: list[dict] = [
     {
@@ -149,6 +167,12 @@ TOOLS: list[dict] = [
 
 async def _run_tool(name: str, inputs: dict) -> str:
     global _page
+
+    # Pre-dispatch capability check
+    if name not in CAPABILITY_MAP:
+        raise CapabilityError(
+            f"Tool '{name}' is not in the capability map and cannot be dispatched."
+        )
 
     if name == "open_page":
         path = inputs["file_path"].replace("\\", "/")
@@ -274,7 +298,7 @@ async def run(html_path: str) -> None:
         print(f"  File : {html_path}")
         print(f"  Model: claude-opus-5-5  (Opus 5.5 with adaptive thinking)\n")
 
-        while True:
+        for _iteration in range(1, MAX_ITERATIONS + 1):
             response = await client.messages.create(
                 model="claude-opus-5-5",
                 max_tokens=16000,
@@ -318,6 +342,8 @@ async def run(html_path: str) -> None:
                     )
 
             messages.append({"role": "user", "content": tool_results})
+        else:
+            print(f"\n[Warning] Reached maximum iterations ({MAX_ITERATIONS}).")
 
         await _browser.close()
 

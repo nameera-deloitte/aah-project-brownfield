@@ -64,7 +64,9 @@ def test_F_MOD_000_pytest_collect_only_clean():
         f"stdout: {result.stdout}\n"
         f"stderr: {result.stderr}"
     )
-    assert "error" not in result.stdout.lower() or "0 error" in result.stdout.lower(), (
+    # Check for pytest's actual collection-error markers (not just the word "error" appearing in
+    # test names, which would cause false positives — e.g. test_..._capability_error_properties).
+    assert "ERROR collecting" not in result.stdout and "\nERRORS\n" not in result.stdout, (
         f"Collection errors present:\n{result.stdout}"
     )
 
